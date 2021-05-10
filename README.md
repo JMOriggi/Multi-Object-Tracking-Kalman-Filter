@@ -22,10 +22,10 @@ I used Global Nearest Neighbor Standard Filter (GNNSF) as multi object tracking 
 ![Alt text](/git-docs/multitrack.JPG )
 
 ## Applications
-- Bats tracking: using multitracking and kalman filter estimation. Only for this task we considered the segmentation and localization already provided. In the details when a track doesn’t have a clear close position available (we search in the cost matrix the position with minimum cost; cost computed between the expected position decided by the kalman filter and the list of available localization in the frame), we will trust the kalman filter estimate as current position. If the track stays for more than 5 frames in this state we will consider the track lost and we will drop it.
+- **Bats tracking**: using multitracking and kalman filter estimation. Only for this task we considered the segmentation and localization already provided. In the details when a track doesn’t have a clear close position available (we search in the cost matrix the position with minimum cost; cost computed between the expected position decided by the kalman filter and the list of available localization in the frame), we will trust the kalman filter estimate as current position. If the track stays for more than 5 frames in this state we will consider the track lost and we will drop it.
 
 ![Alt text](/git-docs/bats_app.JPG ) 
 
-- Cells tracking: The process is pretty much the same as bats and we use multitracking. However, since cells do not moves linearly, we estimate the next position of the cells using a random coordinate generator.
+- **Cells tracking**: The process is pretty much the same as bats and we use multitracking. However, since cells do not moves linearly, we estimate the next position of the cells using a random coordinate generator.
 
 ![Alt text](/git-docs/cells_app.JPG ) 
