@@ -14,11 +14,15 @@ Also use to fuse multiple noisy measurement to best find the car position for ex
 Kalman is a linear model, so good for object that moves in a linear way (like bats). Cells for example moves in a non linear way,
 in that case we should consider other methods (complex non linear Kalman filter).
 
-## Multi-object tracking
+![Alt text](/git-docs/kalman.JPG )
 
+## Multi-object tracking
+I used Global Nearest Neighbor Standard Filter (GNNSF) as multi object tracking algorithm. Using a derived cost matrix I'm then able to derive the best match of each track with each measurement. Each track should have a measurement associated. Matrix formulation of the algorithm implemented in the image:
+
+![Alt text](/git-docs/multitrack.JPG )
 
 ## Applications
-- Bats tracking:
+- Bats tracking: using multitracking and kalman filter estimation. In the details when a track doesn’t have a clear close position available (we search in the cost matrix the position with minimum cost; cost computed between the expected position decided by the kalman filter and the list of available localization in the frame), we will trust the kalman filter estimate as current position. If the track stays for more than 5 frames in this state we will consider the track lost and we will drop it.
 
 ![Alt text](/git-docs/bats_app.JPG ) 
 
