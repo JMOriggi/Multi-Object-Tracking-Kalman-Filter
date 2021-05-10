@@ -26,6 +26,6 @@ I used Global Nearest Neighbor Standard Filter (GNNSF) as multi object tracking 
 
 ![Alt text](/git-docs/bats_app.JPG ) 
 
-- Cells tracking: The process is pretty much the same as bats and we use multitracking. However, since cells do not leave the frame, we cannot really lose their track in that way but for the occlusion frames, we estimate the position of the cells using a random coordinate generator.
+- Cells tracking: The process is pretty much the same as bats and we use multitracking. However, since cells do not moves linearly, we estimate the next position of the cells using a random coordinate generator.
 
 ![Alt text](/git-docs/cells_app.JPG ) 
