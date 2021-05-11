@@ -1,5 +1,7 @@
 # Multi-Object-Tracking-Kalman-Filter
 
+2 gui applications for object tracking in video frames. Application developped in python using tkinter library for the gui interface.
+
 ## About Kalman Filter
 Kalman filtering, also known as linear quadratic estimation (LQE), is an algorithm 
 that uses a series of measurements observed over time, containing statistical 
