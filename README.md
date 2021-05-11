@@ -28,6 +28,6 @@ I used Global Nearest Neighbor Standard Filter (GNNSF) as multi object tracking 
 
 ![Alt text](/git-docs/bats_app.JPG ) 
 
-- **Cells tracking**: The process is pretty much the same as bats and we use multitracking. However, since cells do not moves linearly, we estimate the next position of the cells using a random coordinate generator.
+- **Cells tracking**: The process is pretty much the same as bats and we use multitracking. However, since cells do not moves linearly, we estimate the next position of the cells using a random coordinate generator, instead of kalman filter.
 
 ![Alt text](/git-docs/cells_app.JPG ) 
